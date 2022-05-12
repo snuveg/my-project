@@ -505,11 +505,16 @@ body,html {
 
 .section--partners {
   background: #F4F5F5;
-  margin: 0;
-  max-height: 537px;
-  padding: 88px 0 117px;
+  padding: 90px 0;
   font-style: 48px;
   color: #1A1B1E;
+  margin: 0;
+}
+
+
+.partners__title {
+  font-size: 48px;
+  margin-bottom: 80px;
 }
 
 .partners__list {
@@ -519,15 +524,21 @@ body,html {
   justify-content: space-between;
 }
 
-.partners__link {
-
-  height: 100px;
-  filter: grayscale(1);
+.partners__item {
   margin-right: 50px;
 }
 
-.partners__link:nth-child(4n) {
+.partners__item:nth-child(4n) {
   margin-right: 0;
+}
+
+.partners__link {
+  display: flex;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(1);
 }
 
 .partners__link:hover {
