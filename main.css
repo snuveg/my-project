@@ -37,10 +37,10 @@ p {
   margin-top: 0;
 }
 
-img {
+/* img {
   max-width: 100%;
   max-height: 100%;
-}
+} */
 
 body,html {
   height: 100%;
@@ -623,22 +623,43 @@ body,html {
 
 /*-------------------------------------------------------------------*/
 
-.review {
-  display: flex;
-  flex-direction: column;
 
+.reviews__container {
+  background: #fff;
+}
+
+.reviews {
+  margin-top: 100px;
+  margin-bottom: 55px;
+  column-count: 2;
+  column-gap: 27px;
+
+}
+.review {
+  display: inline-flex;
+  flex-direction: column;
+  color: #1A1B1E;
+  background: #F4F5F5;
+  border-radius: 5px;
+  padding: 50px 30px 30px 30px;
+  margin-bottom: 17px;
 }
 
 .review__header {
   display: flex;
   align-items: center;
+  margin-bottom: 27px;
 }
 
 .review__photo {
-  width: 1402px;
+  width: 142px;
   height: 142px;
   overflow: hidden;
   border-radius: 50%;
+  margin-right: 22px;
+}
+.review__user-data {
+  margin-left: 22px;
 }
 
 .review__user {
@@ -646,6 +667,237 @@ body,html {
   align-items: center;
   font-size: 24px;
   line-height: 42px;
-  color: #2E77A4;
   text-decoration: underline;
+}
+
+.review__user:hover {
+  color: #2E77A4;
+}
+
+.review__user::after {
+  content: url(./img/users/user-vk.png);
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 10px 20px;
+  background: #E7E7E7;
+  border-radius: 35px;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.tag--green {
+  background: #B9EAE4;
+}
+
+.review__title {
+  font-size: 30px;
+  margin-bottom: 13px;
+}
+
+.review__article {
+  color: #818181;
+  margin-bottom: 47px;
+}
+
+.review__date {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.pager--reviews {
+  margin-bottom: 92px;
+}
+
+.separator {
+  background: url(./img/back/reviews1.png);
+  min-height: 363px;
+  display: flex;
+  align-items: end;
+  color: #fff;
+}
+
+.separator__content {
+  display: flex;
+  justify-content: stretch;
+
+}
+
+.separator__title {
+  font-size: 48px;
+  line-height: 56px;
+  align-self: center;
+}
+
+.separator__img  {
+  margin-right: 37px;
+}
+
+.inner-section {
+  background: #F4F5F5;
+  color: #1A1B1E;
+  padding: 60px 0 96px 0;
+}
+
+.form__title {
+  font-size: 48px;
+  line-height: 56px;
+  margin-bottom: 57px;
+}
+.form__row {
+  display: flex;
+  margin-bottom: 26px;
+}
+
+.form__input {
+  flex: 1;
+  margin-right: 28px;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 20px 30px;
+  border: none;
+  font-size: 18px;
+}
+
+.form__input--red {
+  border: 1px solid #F5170E;
+}
+
+.form__input::placeholder {
+  color: #666;
+}
+
+.form__input:last-child {
+  margin-right: 0;
+}
+
+.form__input--textarea {
+  height: 235px;
+}
+
+.form__controls {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.form__controls-title {
+  width: 37%;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.controls-item {
+  margin-right: 21px;
+  margin-bottom: 9px;
+}
+
+.controls-item:last-child {
+  margin-right: 0;
+}
+
+.contorls__elem {
+  cursor: pointer;
+}
+
+.controls__checkbox {
+  display: none;
+}
+
+.controls__checkbox:checked ~ .controls__tag {
+  background: #B9EAE4;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn--form {
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  margin-right: 17px;
+}
+
+.btn--form:last-child {
+  margin-right: 0;
+}
+
+.btn--black {
+  background: #8e8e8e;
+}
+
+.btn--black:hover {
+  background: #2B2B2B;
+}
+
+/*-------------------------------------------------------------------*/
+
+.welcome {
+  width: 100%;
+  height: 100%;
+  background: url(./img/back/welcome.png) center center no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome__container {
+  display: flex;
+  flex-direction: column;
+  animation: anim 1.1s forwards;
+  opacity: 0;
+}
+
+.welcome_logo {
+  width: 591px;
+  height: 248px;
+  background: url(./img/back/shades.png) center center no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.welcome__title {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.btn-welcome  {
+  justify-content: center;
+  margin: 0 auto;
+  padding: 18px 58px;
+  color: #fff;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0.7);
+  }
+  20% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  40% {
+    transform: scale(0.8);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
