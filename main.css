@@ -37,6 +37,11 @@ p {
   margin-top: 0;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 body,html {
   height: 100%;
 }
@@ -102,15 +107,82 @@ body,html {
 .contacts {
   font-style: normal;
   text-align: right;
+  display: flex;
+  flex-direction: column;
 }
 
-.contacts_phone {
+.contacts__phone {
   font-size: 26px;
 }
 
-.contacts__dropdown-workhours {
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+
+.dropdown__workhours {
   text-decoration: underline;
   font-size: 13px;
+  color: #98a4ab;
+  display: inline-flex;
+}
+
+.dropdown:hover .dropdown__workhours {
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  position: absolute;
+  background: #ededed;
+  color: #1e1f20;
+  font-size: 13px;
+  line-height: 21px;
+  border-radius: 9px;
+  padding: 20px;
+  margin-top: 15px;
+  top: 100%;
+  right: 9999px;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.dropdown__menu::before {
+  content: "";
+  display: block;
+  height: 20px;
+  left: 0;
+  right: 0;
+  top: -16px;
+  position: absolute;
+}
+
+.dropdown__menu::after {
+  content: "";
+  position: absolute;
+  border: 16px solid transparent;
+  border-bottom-color: #ededed;
+  border-top-width: 0;
+  top: -16px;
+  right: 35px;
+
+}
+
+.dropdown:hover .dropdown__menu {
+  right: 0;
+  opacity: 0.8;
+}
+
+
+.dropdown__item--bold {
+  font-weight: 600;
+}
+
+.dropdown__item--bold {
+  font-weight: 700;
 }
 
 .hero__text-section {
@@ -413,7 +485,6 @@ body,html {
 .top-line {
   min-height: 412px;
   background: url(./img/back/service-headline.png) center center no-repeat;
-  display: flex;
 }
 
 .top-line__container {
@@ -548,4 +619,33 @@ body,html {
 .footer--services {
   background: #1A1B1E;
   color: #fff;
+}
+
+/*-------------------------------------------------------------------*/
+
+.review {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.review__header {
+  display: flex;
+  align-items: center;
+}
+
+.review__photo {
+  width: 1402px;
+  height: 142px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.review__user {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  line-height: 42px;
+  color: #2E77A4;
+  text-decoration: underline;
 }
