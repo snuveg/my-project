@@ -109,6 +109,7 @@ body,html {
   text-align: right;
   display: flex;
   flex-direction: column;
+  align-items: end;
 }
 
 .contacts__phone {
@@ -148,6 +149,7 @@ body,html {
   right: 9999px;
   opacity: 0;
   transition: opacity .5s;
+  min-width: 162px;
 }
 
 .dropdown__menu::before {
@@ -441,37 +443,37 @@ body,html {
   display: block;
   width: 36px;
   height: 36px;
-  background: center center no-repeat;
 }
 
 .social__item--tg .social__link {
-  background-image: url(./img/social/tg.png);
+  background: url("./img/socials/all.png") -122px -10px;
 }
 
 .social__item--tg .social__link:hover {
-  background-image: url(./img/social/tg-h.png);
+  background: url("./img/socials/all.png") -122px -66px;
 }
 
 .social__item--vk .social__link {
-  background-image: url(./img/social/vk.png);
+  background: url("./img/socials/all.png") -10px -122px;
 }
 
 .social__item--vk .social__link:hover {
-  background-image: url(./img/social/vk-h.png);
+  background: url("./img/socials/all.png") -66px -122px;
 }
+
 .social__item--fb .social__link {
-  background-image: url(./img/social/fb.png);
+  background: url("./img/socials/all.png") -10px -10px;
 }
 
 .social__item--fb .social__link:hover {
-  background-image: url(./img/social/fb-h.png);
+  background: url("./img/socials/all.png") -66px -10px;
 }
 .social__item--in .social__link {
-  background-image: url(./img/social/in.png);
+  background: url("./img/socials/all.png") -10px -66px;
 }
 
 .social__item--in .social__link:hover {
-  background-image: url(./img/social/in-h.png);
+  background: url("./img/socials/all.png") -66px -66px;
 }
 .contacts__text {
   color: #9A9A9A;
@@ -847,6 +849,7 @@ body,html {
   display: flex;
   justify-content: center;
   align-items: center;
+  Background-size: cover;
 }
 
 .welcome__container {
